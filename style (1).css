@@ -76,6 +76,7 @@ body{
 
 }
 .login{
+    background-color: rgba(241, 196, 15);
     padding: 40px;
 }
 .login h2{
