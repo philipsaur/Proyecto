@@ -212,9 +212,9 @@ input::placeholder, textarea::placeholder{
     padding: 50px 0 0 0;
     background: linear-gradient(
         180deg,
-        rgb(207, 218, 62) 0%,
-        rgb(190, 159, 17) 51%,
-        rgb(163, 135, 8) 100%);
+    rgb(255, 234, 0) 0%, 
+    rgb(189, 63, 84) 51%,
+    rgb(0,255,255) 100%);
 }
 
 .link-img {
