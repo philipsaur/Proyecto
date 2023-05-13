@@ -22,9 +22,9 @@ p{
 .header {
     background: linear-gradient(
     180deg,
-    rgb(233, 196, 31) 0%,
-    rgb(190, 159, 17) 51%,
-    rgb(163, 135, 8) 100%);
+    rgb(255, 253, 232)) 0%, 'amarillo pastel'
+    rgb(255,192,203) 51%,
+    rgb(0,255,255) 100%);
     min-width: 70vh;
     display: flex;
     align-items: center;
