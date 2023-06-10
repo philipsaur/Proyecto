@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSG OWL SYSTEM|Donaciones </title>
+    <link rel="stylesheet" href="styleI.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="PSG.png" alt="Logo PSG">
+  </div>
+  <h1>Donaciones</h1>
+  <nav class="navi">
+    <a href="Blog.html">Blog</a>
+        <a href="Novedades.html">Novedades</a>
+    <a href="Transporte.html">Transporte</a>
+    <a href="Donaciones.html">Donaciones</a>
+    <a href="LoginOwlSystem.html">Registros</a>
+    <a href="IC.html">Regresar</a>
+    <a href="index.html"><button class="BtnLogin">Cerrar sesión</button></a>
+  </nav>
+</header>
+
+<body>
+    <form method="post">
+    	<h1>Donaciones</h1>
+    	<input type="number" name="IDD" placeholder="Id Donacion">
+        <input type="date" name="FD" placeholder="Fecha Donacion">
+    	<input type="number" name="Cantidad" placeholder="Cantidad">
+        <input type="text" name="PD" placeholder="Persona donante">
+        <input type="number" name="IDE" placeholder="Id empresa"><br><br>
+        <select>
+            <option>Tipo de Donacion</option>
+            <option>Monetaria</option>
+            <option>Material</option>
+
+        </select>
+        
+    	<input type="submit" name="register">
+    </form>
+</body>
+</html>
+</body>
+</html>

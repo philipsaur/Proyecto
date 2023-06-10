@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  header {
+    background-color: #BF9D58;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 80px;
+
+    }
+    
+   .h h1 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+    
+    }
+    
+    
+  
+  .navi {
+    background-color: #BF9D58;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navi a {
+    color: #ffffff;
+    font-size: 18px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .navi a:hover {
+    color: #ff0000;
+  }
+  
+  .BtnLogin {
+    background-color: transparent;
+    color: #ff0000;
+    padding: 10px 20px;
+    border: 1px solid #ff0000;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .BtnLogin:hover {
+    background-color: #ffffff;
+    color: #ff0000;
+  }
+  
+  .BtnLogin a {
+    color: #ff0000;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 20px;
+  }
