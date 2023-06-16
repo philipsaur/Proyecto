@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PSG OWL SYSTEM</title>
-    <link rel="stylesheet" href="stylePr.css">
+    <title>PSG OWL SYSTEM|Inventarios </title>
+    <link rel="stylesheet" href="styleI.css">
 </head>
 <body>
 
@@ -13,11 +13,12 @@
   <div class="logo">
     <img src="PSG.png" alt="Logo PSG">
   </div>
-    <h1>INVENTARIOS</h1>
+  <h1>Donaciones</h1>
   <nav class="navi">
-        <a href="Novedades.html">Novedades</a>
+    <a href="Novedades.html">Novedades</a>
     <a href="Transporte.html">Transporte</a>
     <a href="Donaciones.html">Donaciones</a>
+    <a href="LoginOwlSystem.html">Registros</a>
     <a href="IC.html">Regresar</a>
     <a href="index.html"><button class="BtnLogin">Cerrar sesión</button></a>
   </nav>
@@ -25,13 +26,20 @@
 
 <body>
     <form method="post">
-    	<h1>¡Suscribete!</h1>
-    	<input type="text" name="name" placeholder="Nombre completo">
-    	<input type="email" name="email" placeholder="Email">
-    	<input type="submit" name="register">
+    	<h1>Inventarios</h1>
+    	<input type="number" name="IDI" placeholder="Id Inventario">
+        <input type="date" name="FD" placeholder="Fecha Registro>
+    	<input type="number" name="Cantidad" placeholder="Cantidad">
+        <input type="text" name="IDD" placeholder="Id Donacion>
+        <input type="number" name="Archivados" placeholder="Archivados"><br><br>
+        <select>
+            <option>Estado de material</option>
+            <option>Bueno</option>
+            <option>Malo</option>
+
+        </select>
+        
+    	<input type="submit" name="registerI">
     </form>
-       <?php 
-        include("registrar.php");
-        ?>
 </body>
 </html>
