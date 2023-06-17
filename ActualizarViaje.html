@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar viaje OS</title>
+    <link rel="stylesheet" href="actuviaje.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <img src="PSG.png" alt="Logo PSG">
+        </div>
+        <h1>Actualizar viajes</h1>
+        <nav class="navi">
+          <a href="Transporte.html">Regresar</a>
+          <a href="index.html"><button class="BtnLogin">Cerrar sesión</button></a>
+        </nav>
+    </header>
+    
+    <form action="contr.php" method="post">
+        <h1>Actualizar viaje</h1>
+        Viaje a Actualizar<br>
+            <select id="listaOpciones" name="listaOpciones">
+                <option value="opcion1">Opción 1</option>
+                <option value="opcion2">Opción 2</option>
+                <option value="opcion3">Opción 3</option>
+                <option value="opcion4">Opción 4</option>
+            </select><br>
+            Nueva Fecha
+            <input type="date" name="" placeholder="Nueva Fecha">
+            Nueva Hora
+            <input type="time" name="" placeholder="Id Transporte"> <br><br>
+        
+            <input type="submit" name="registerI" value="Actualizar">
+        </form>
+</body>
+</html>
