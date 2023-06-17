@@ -116,10 +116,11 @@ h1 {
 }
 
 .navbar a:hover {
-  background-color: #BF9D58;
+  background-color: #DAA520;
   color: #ffffff;
 }
 
 main {
   padding: 20px;
 }
+
