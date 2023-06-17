@@ -12,7 +12,7 @@
   }
   
   header {
-    background-color: #DAA520;;
+    background-color: #DAA520;
     padding: 30px;
     display: flex;
     justify-content: space-between;
@@ -36,7 +36,7 @@
     
   
   .navi {
-    background-color: #BF9D58;
+    background-color: #DAA520;
     padding: 10px;
     border-radius: 5px;
     display: flex;
