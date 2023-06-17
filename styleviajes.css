@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+  
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  header {
+    background-color: #BF9D58;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 80px;
+
+    }
+    
+   .h h1 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+    
+    }
+    
+    
+  
+  .navi {
+    background-color: #BF9D58;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navi a {
+    color: #ffffff;
+    font-size: 18px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .navi a:hover {
+    color: #ff0000;
+  }
+  
+  .BtnLogin {
+    background-color: transparent;
+    color: #ff0000;
+    padding: 10px 20px;
+    border: 1px solid #ff0000;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .BtnLogin:hover {
+    background-color: #ffffff;
+    color: #ff0000;
+  }
+  
+  .BtnLogin a {
+    color: #ff0000;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 20px;
+}
+
+form {
+	padding: 50px 20px;
+	background-color: #ededed;
+	margin: calc(25% + 100px);
+	margin-top: 70px;
+	padding-top: 28px;
+	margin-bottom: 30px
+}
+
+h1 {
+	text-align: center;
+	padding: 12px;
+	color: #444
+}
+
+input {
+	width: calc(100% - 20px);
+	padding: 9px;
+	margin: auto;
+	margin-top: 12px;
+	font-size: 16px
+}
+
+input[type='submit']{
+	background-color: rgb(231, 141, 39);
+	color: #fff;
+	width: calc(80% - 20px);
+	margin: 0 10%;
+	margin-top: 22px;
+	border: none;
+}
+
+
+.ok {
+	text-align: center;
+	width: 100%;
+	padding: 12px;
+	background-color: #1e6;
+	color: #fff
+}
+.bad {
+	text-align: center;
+	width: 100%;
+	padding: 12px;
+	background-color: #a22;
+	color: #fff
+}
