@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PSG OWL SYSTEM|Registro Beneficiario </title>
+    <title>PSG OWL SYSTEM|Registro beneficiarios </title>
     <link rel="stylesheet" href="styleviajes.css">
 </head>
 <body>
@@ -18,25 +18,27 @@
         <a href="Novedades.html">Novedades</a>
     <a href="Transporte.html">Transporte</a>
     <a href="Donaciones.html">Donaciones</a>
-    <a href="LoginOwlSystem.html">Registros</a>
-    <a href="IC.html">Regresar</a>
+    <a href="Inventarios.html">Registros</a>
+    <a href="Novedades.html">Regresar</a>
     <a href="index.html"><button class="BtnLogin">Cerrar sesión</button></a>
   </nav>
 </header>
 
 <body>
     <form action="conlog.php" method="post">
-        <h2>Registro Beneficiario</h2>
+        Registro Beneficiario
         <input type="number" placeholder="Numero de documento" name="numdoc">
         <input type="text" placeholder="Nombre" name="nombre">
         <input type="text" placeholder="Apellidos" name="apellido">
         <input type="text" placeholder="Nacionalidad" name="nacion">
         <input type="text" placeholder="Tipo de documento" name="tipodoc">
-        <input type="text" placeholder="Fecha de nacimiento" name="fdn">
+        <input type="date" placeholder="Fecha de nacimiento" name="fdn">
         <input type="number" placeholder="Telefono" name="tel">
         <input type="email" placeholder="Correo" name="crr">
-        
-    	<input type="submit" name="registerI">
+        <input type="submit" name="registerI" value="Registrar">
+    </form>
+    <form action="Consultarlog.php">
+        <button class="btn">Consultar</button></a>
     </form>
 </body>
 </html>
