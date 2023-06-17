@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario PHP</title>
+    <link rel="stylesheet" href="styleviajes.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="PSG.png" alt="Logo PSG">
+  </div>
     <style>
 /* Estilos para la tabla */
 table {
