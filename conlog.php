@@ -11,7 +11,7 @@ $Fecha_na = $_POST["fdn"];
 $Tel = $_POST["tel"];
 $Correo = $_POST["crr"];
 
-$sql = "INSERT INTO inscripcion (Numero_documento, Nombre, Apellidos, Nacionalidad, Tipo_documento, Fecha_nacimiento, Telefono, Correo) VALUES ('$Num_doc', '$Nombre', '$Apellidos', '$Nacionalidad', '$Tipo_doc', '$Fecha_na','$Tel','$Correo');";
+$sql = "INSERT INTO Inscripcion (Numero_documento, Nombre, Apellidos, Nacionalidad, Tipo_documento, Fecha_nacimiento, Email, Contacto_telefonico) VALUES ('$Num_doc', '$Nombre', '$Apellidos', '$Nacionalidad', '$Tipo_doc', '$Fecha_na','$Correo','$Tel');";
 if($conn -> query($sql)){
     echo "Registro creado";
     include_once "LoginOwlSystem.html";
