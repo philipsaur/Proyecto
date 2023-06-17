@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -21,9 +22,9 @@ p{
 .header {
     background: linear-gradient(
     180deg,
-    rgb(255, 234, 0) 0%, 
-    rgb(189, 63, 84) 51%,
-    rgb(0,255,255) 100%);
+    rgb(233, 196, 31) 0%,
+    rgb(190, 159, 17) 51%,
+    rgb(163, 135, 8) 100%);
     min-width: 70vh;
     display: flex;
     align-items: center;
@@ -31,7 +32,7 @@ p{
 
 .menu {
     position: absolute;
-    top: 10%;
+    top: 10px;
     left: 0;
     right: 0;
     display: flex;
@@ -40,7 +41,7 @@ p{
 }
 
 .logo img{
-    width: 150px;
+    width: 200px;
 }
 
 .menu .navbar ul li{
@@ -79,14 +80,14 @@ p{
 }
 
 .header-content{
-    padding: 100% 0;
+    padding: 100px 0;
     display: flex;
     align-items: center;
 }
 
 .header-txt {
     width: 50%;
-    padding-right: 5%;
+    padding-right: 100px;
 }
 
 .header-txt h1{
@@ -165,55 +166,64 @@ p {
 .btn-2:hover:hover{
     background-color: #e56820;
 }
-.form-content{
+
+
+.form-content {
     text-align: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0,0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    width: 300px;
-    margin-left: 40%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
     margin-bottom: 50px;
-}
-
-
-
-.input-group{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-input, textarea{
-    padding: 17px 25px;
-    border-radius: 25px;
+  }
+  
+  .form-content input,
+  .form-content textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
     margin-bottom: 20px;
-    background-color: #cfd3d0;
-    border: 2px solid #f0faf1;
+    border: 1px solid #f0faf1;
+    background-color: #f8cdaf;
     color: #283629;
     outline: none;
-}
-
-input::placeholder, textarea::placeholder{
-    color: #a58311;
+  }
+  
+  .form-content textarea {
+    height: 120px;
+  }
+  
+  .form-content input::placeholder,
+  .form-content textarea::placeholder {
+    color: #000000;
     font-weight: bold;
-}
-
-.btn-3{
+  }
+  
+  .form-content button {
     font-size: 16px;
     color: #ffffff;
     border: 0;
     border-radius: 25px;
-    background-color: rgb(218, 178, 126);
+    background-color: #FF5733;
     cursor: pointer;
-    font-weight: bold;}
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-content button:hover {
+    background-color: #FFC300;
+  }
 
 .footer {
     border-top: 2px solid #e8e8e8;
     padding: 50px 0 0 0;
     background: linear-gradient(
         180deg,
-    rgb(255, 234, 0) 0%, 
-    rgb(189, 63, 84) 51%,
-    rgb(0,255,255) 100%);
+        rgb(233, 196, 31) 0%,
+        rgb(190, 159, 17) 51%,
+        rgb(163, 135, 8) 100%);
 }
 
 .link-img {
