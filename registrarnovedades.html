@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regitro Novedades OS</title>
+    <link rel="stylesheet" href="styleviajes.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <img src="PSG.png" alt="Logo PSG">
+        </div>
+        <h1>Registrar Novedades</h1>
+        <nav class="navi">
+          <a href="Novedades.html">Regresar</a>
+          <a href="index.html"><button class="BtnLogin">Cerrar sesión</button></a>
+        </nav>
+      </header>
+      <body>
+    <form action="contr.php" method="post">
+    	<h1>Nuevo Registro</h1>
+    	Fecha Novedad
+        <input type="date" name="FN" placeholder="Fecha Novedad">
+        <input type="number" name="IDE" placeholder="Id empleado">
+    	<input type="text" name="TN" placeholder="Tipo de Novedad">
+        <input type="text" name="Comen" placeholder="Comentarios"><br><br>
+
+        
+    	<input type="submit" name="registerI" value="Registrar">
+    </form>
+</body>
+</html>
