@@ -21,6 +21,10 @@ header {
 .logo img {
   height: 80px;
 }
+h1 {
+text-align: center;
+padding: 30px;
+}
 .BtnLogin {
   background-color: transparent;
   color: #ff0000;
@@ -123,3 +127,4 @@ h1 {
 main {
   padding: 20px;
 }
+
