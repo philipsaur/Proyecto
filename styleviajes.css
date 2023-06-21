@@ -1,3 +1,4 @@
+/* CSS personalizado */
 * {
   margin: 0;
   padding: 0;
@@ -21,19 +22,15 @@ header {
 
 .logo img {
   height: 80px;
+}
 
-  }
-  
- .h h1 {
+.h h1 {
   color: #ffffff;
   font-size: 18px;
   margin-right: 10px;
   text-decoration: none;
   transition: color 0.3s;
-  
-  }
-  
-  
+}
 
 .navi {
   background-color: #DAA520;
@@ -64,16 +61,21 @@ header {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+  animation: pulse 1s infinite;
 }
 
-.BtnLogin:hover {
-  background-color: #ffffff;
-  color: #ff0000;
-}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
 
-.BtnLogin a {
-  color: #ff0000;
-  text-decoration: none;
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 main {
@@ -81,46 +83,46 @@ main {
 }
 
 form {
-padding: 50px 20px;
-background-color: #ededed;
-margin: calc(25% + 100px);
-margin-top: 70px;
-padding-top: 28px;
-margin-bottom: 30px
+  padding: 50px 20px;
+  background-color: #ffffff;
+  margin: calc(25% + 100px);
+  margin-top: 70px;
+  padding-top: 28px;
+  margin-bottom: 30px
 }
 
 h1 {
-text-align: center;
-padding: 12px;
-color: #444
+  text-align: center;
+  padding: 12px;
+  color: #444
 }
 
 input {
-width: calc(100% - 20px);
-padding: 9px;
-margin: auto;
-margin-top: 12px;
-font-size: 16px
+  width: calc(100% - 20px);
+  padding: 9px;
+  margin: auto;
+  margin-top: 12px;
+  font-size: 16px
 }
 
-input[type='submit']{
-background-color: rgb(231, 141, 39);
-color: #fff;
-width: 76%;
-margin: 0 10%;
-margin-top: 22px;
-border: none;
-cursor: pointer;
+input[type='submit'] {
+  background-color: rgb(231, 141, 39);
+  color: #fff;
+  width: 76%;
+  margin: 0 10%;
+  margin-top: 22px;
+  border: none;
+  cursor: pointer;
 }
 
 .btn {
-background-color: rgb(231, 141, 39);
-color: #fff;
-width: 76%;
-height: 35px;
-margin: 0 10%;
-margin-top: 22px;
-border: none;
-font-size: 16px;
-cursor: pointer;
+  background-color: rgb(231, 141, 39);
+  color: #fff;
+  width: 76%;
+  height: 35px;
+  margin: 0 10%;
+  margin-top: 22px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
 }
