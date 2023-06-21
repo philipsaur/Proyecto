@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PSG OWL SYSTEM|Donaciones </title>
-    <link rel="stylesheet" href="actuviaje.css">
+    <link rel="stylesheet" href="styleviajes.css">
 </head>
 <body>
 
@@ -22,19 +22,18 @@
 <body>
     <form action="conexdon.php" method="post">
         <nav class="navbar">
-    	<h1> Registrar Donaciones</h1>
-      <select>
-        <option>Tipo de Donacion</option>
-        <option>Monetaria</option>
-        <option>Material</option>
-    </select>
+          <h1> Registrar Donaciones</h1>
     	<input type="number" name="IDD" placeholder="Id Donacion"><br><br>
         Fecha Donacion
         <input type="date" name="FD" placeholder="Fecha Donacion">
     	<input type="number" name="Cantidad" placeholder="Cantidad">
-        <input type="text" name="PD" placeholder="Persona donante">
-        <input type="number" name="IDE" placeholder="Id empresa"><br><br>
 
+      <select name="Tipo">
+        <option value="">Tipo de Donacion</option>
+        <option value="Monetaria">Monetaria</option>
+        <option value="Material">Material</option>
+      </select>
+      <br><br>
         
     	<input type="submit" name="register" value="Registrar"> 
     </nav>

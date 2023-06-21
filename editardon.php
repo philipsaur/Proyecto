@@ -8,33 +8,32 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
 }
+
 if (isset($_POST["guardar"])) {
-    $id = $_POST["id"];
-    $nombre = $_POST["nombre"];
-    $apellido = $_POST["apellido"];
-    $nacionalidad = $_POST["nacionalidad"];
-    $tipodoc = $_POST["tipodoc"];
-    $fdn = $_POST["fdn"];
-    $sql = "UPDATE Inscripcion SET Nombre='$nombre', Apellidos='$apellido', Nacionalidad='$nacionalidad', Tipo_documento='$tipodoc', Fecha_nacimiento='$fdn' WHERE Numero_documento='$id'";
+    $Id_donacion = $_POST["id"];
+    $Fecha_donacion = $_POST["fecha_donacion"];
+    $Cantidad = $_POST["cantidad"];
+    $Tipo_donacion = $_POST["Tipo_donacion"];
+    
+    $sql = "UPDATE donacion SET Fecha_donacion = '$Fecha_donacion', Cantidad = '$Cantidad', Tipo_donacion = '$Tipo_donacion' WHERE Id_donacion = '$Id_donacion'";
+
 
     if ($conn->query($sql) === TRUE) {
-        header("Location: consultarlog.php");
+        header("Location: consultadon.php");
         exit();
     } else {
         echo "Error al guardar los cambios: " . $conn->error;
     }
 } else {
-    $id = $_GET["id"];
-    $sql = "SELECT * FROM Inscripcion WHERE Numero_documento='$id'";
+    $Id_donacion = $_GET["id"];
+    $sql = "SELECT * FROM donacion WHERE Id_donacion = '$Id_donacion'";
     $resultado = $conn->query($sql);
 
     if ($resultado->num_rows == 1) {
         $row = $resultado->fetch_assoc();
-        $nombre = $row["Nombre"];
-        $apellido = $row["Apellidos"];
-        $nacionalidad = $row["Nacionalidad"];
-        $tipodoc = $row["Tipo_documento"];
-        $fdn = $row["Fecha_nacimiento"];
+        $Fecha_donacion = $row["Fecha_donacion"];
+        $Cantidad = $row["cantidad"];
+        $Tipo_donacion = $row["Tipo_donacion"];
     } else {
         echo "Registro no encontrado.";
         exit();
@@ -57,21 +56,23 @@ if (isset($_POST["guardar"])) {
           <img src="PSG.png" alt="Logo PSG">
         </div>
         <nav class="navi">
-          <a href="Consultarlog.php">Regresar</a>
+          <a href="consultadon.php">Regresar</a>
           <a href="index.html"><button class="BtnLogin">Cerrar sesión</button></a>
         </nav>
-      </header>
     </header>
 
     <h1>Editar Registro</h1>
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <input type="hidden" name="id" value="<?php echo $id; ?>">
-        <input type="text" placeholder="Nombre" name="nombre" value="<?php echo $nombre; ?>">
-        <input type="text" placeholder="Apellidos" name="apellido" value="<?php echo $apellido; ?>">
-        <input type="text" placeholder="Nacionalidad" name="nacionalidad" value="<?php echo $nacionalidad; ?>">
-        <input type="text" placeholder="Tipo de documento" name="tipodoc" value="<?php echo $tipodoc; ?>">
-        <input type="text" placeholder="Fecha de nacimiento" name="fdn" value="<?php echo $fdn; ?>">
+        <input type="hidden" name="id" value="<?php echo $Id_donacion; ?>">
+        <input type="text" placeholder="Fecha de Donación" name="fecha_donacion" value="<?php echo $Fecha_donacion; ?>">
+        <input type="text" placeholder="Cantidad" name="cantidad" value="<?php echo $Cantidad; ?>">
+        <select name="Tipo_donacion">
+        <option value="">Tipo de Donacion</option>
+        <option value="Monetaria">Monetaria</option>
+        <option value="Material">Material</option>
+      </select>
+      <br><br>
         <input type="submit" name="guardar" value="Guardar cambios">
     </form>
 </body>

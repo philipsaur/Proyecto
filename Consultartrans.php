@@ -54,48 +54,49 @@
           <img src="PSG.png" alt="Logo PSG">
         </div>
         <nav class="navi">
-          <a href="LoginOwlSystem.html">Regresar</a>
+          <a href="Transporte.html">Regresar</a>
           <a href="index.html"><button class="BtnLogin">Cerrar sesión</button></a>
         </nav>
       </header>
     </header>
 
-    <h1>Registro Directorio</h1>
-    <h4>Se ha registrado lo siguiente:</h4>
+    <h1>Registro Rutas</h1>
+    <h4>Se han registrado las siguientes rutas:</h4>
 
     <?php
     include_once("registrar.php");
-    $sql = "SELECT * FROM Inscripcion";
+    $sql = "SELECT * FROM transporte";
     echo '<table>
             <tr>
-                <th>Numero de documento</th>
-                <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>Nacionalidad</th>
-                <th>Tipo de documento</th>
-                <th>Fecha de nacimiento</th>
+                <th>Fecha Viajes</th>
+                <th>Id conductor</th>
+                <th>Id transporte</th>
+                <th>Cantidad beneficiarios</th>
+                <th>Destino</th>
+                <th>Conductor</th>
                 <th class="acciones">Acciones</th>
             </tr>';
     if ($rta = $conn->query($sql)) {
         while ($r = $rta->fetch_assoc()) {
-            $Numdoc = $r["Numero_documento"];
-            $Nombre = $r["Nombre"];
-            $Apellido = $r["Apellidos"];
-            $Nacionalidad = $r["Nacionalidad"];
-            $Tipodoc = $r["Tipo_documento"];
-            $Fecha_nac = $r["Fecha_nacimiento"];
+            $Fecha_viajes = $r["Fecha_viajes"];
+            $Id_conductor = $r["Id_conductor"];
+            $Id_transporte = $r["Id_transporte"];
+            $Cantidad_bene = $r["Cantidad_ben"];
+            $Destino = $r["Destino"];
+            $Nombre_conductor = $r["Nombre_cond"];
 
             echo "<tr>
-                    <td>$Numdoc</td>
-                    <td>$Nombre</td>
-                    <td>$Apellido</td>
-                    <td>$Nacionalidad</td>
-                    <td>$Tipodoc</td>
-                    <td>$Fecha_nac</td>
+                    <td>$Fecha_viajes</td>
+                    <td>$Id_conductor</td>
+                    <td>$Id_transporte</td>
+                    <td>$Cantidad_bene</td>
+                    <td>$Destino</td>
+                    <td>$Nombre_conductor</td>
                     <td class='acciones'>
-                        <a href='editarregistro.php?id=$Numdoc'>Editar</a>
-                        <a href='eliminarregis.php?id=$Numdoc'>Eliminar</a>
-                    </td>
+                    <a href='editarruta.php?id=$Id_conductor'>Editar</a>
+                    <a href='eliminarruta.php?id=$Id_transporte'>Eliminar</a>
+                </td>
+                
                   </tr>";
         }
         $rta->free();

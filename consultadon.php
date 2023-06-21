@@ -1,3 +1,23 @@
+<?php
+include_once "registrar.php";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $Id_donacion = $_POST["IDD"];
+    $Fecha_donacion = $_POST["FD"];
+    $Cantidad = $_POST["Cantidad"];
+    $Tipo_donacion = $_POST["Tipo_donacion"];
+
+    $sql = "INSERT INTO donacion (Id_donacion, Fecha_don, Cantidad, Tipo_donacion) VALUES ('$Id_donacion', '$Fecha_donacion', '$Cantidad', '$Tipo_donacion')";
+
+    if ($conn->query($sql)) {
+        echo "Registro creado";
+        include_once "RegisDonacion.html";
+    } else {
+        echo "Error, no se registró";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,52 +70,44 @@
 </head>
 <body>
     <header>
-    <div class="logo">
-          <img src="PSG.png" alt="Logo PSG">
+        <div class="logo">
+            <img src="PSG.png" alt="Logo PSG">
         </div>
         <nav class="navi">
-          <a href="LoginOwlSystem.html">Regresar</a>
-          <a href="index.html"><button class="BtnLogin">Cerrar sesión</button></a>
+            <a href="Donaciones.html">Regresar</a>
+            <a href="index.html"><button class="BtnLogin">Cerrar sesión</button></a>
         </nav>
-      </header>
     </header>
 
-    <h1>Registro Directorio</h1>
-    <h4>Se ha registrado lo siguiente:</h4>
+    <h1>Registro de Donaciones</h1>
+    <h4>Se han registrado las siguientes donaciones:</h4>
 
     <?php
     include_once("registrar.php");
-    $sql = "SELECT * FROM Inscripcion";
+    $sql = "SELECT * FROM donacion";
     echo '<table>
             <tr>
-                <th>Numero de documento</th>
-                <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>Nacionalidad</th>
-                <th>Tipo de documento</th>
-                <th>Fecha de nacimiento</th>
+                <th>Id Donación</th>
+                <th>Fecha Donación</th>
+                <th>Cantidad</th>
+                <th>Tipo de Donación</th>
                 <th class="acciones">Acciones</th>
             </tr>';
     if ($rta = $conn->query($sql)) {
         while ($r = $rta->fetch_assoc()) {
-            $Numdoc = $r["Numero_documento"];
-            $Nombre = $r["Nombre"];
-            $Apellido = $r["Apellidos"];
-            $Nacionalidad = $r["Nacionalidad"];
-            $Tipodoc = $r["Tipo_documento"];
-            $Fecha_nac = $r["Fecha_nacimiento"];
+            $Id_donacion = $r["Id_donacion"];
+            $Fecha_donacion = $r["Fecha_donacion"];
+            $Cantidad = $r["cantidad"];
+            $Tipo_donacion = $r["Tipo_donacion"];
 
             echo "<tr>
-                    <td>$Numdoc</td>
-                    <td>$Nombre</td>
-                    <td>$Apellido</td>
-                    <td>$Nacionalidad</td>
-                    <td>$Tipodoc</td>
-                    <td>$Fecha_nac</td>
+                    <td>$Id_donacion</td>
+                    <td>$Fecha_donacion</td>
+                    <td>$Cantidad</td>
+                    <td>$Tipo_donacion</td>
                     <td class='acciones'>
-                        <a href='editarregistro.php?id=$Numdoc'>Editar</a>
-                        <a href='eliminarregis.php?id=$Numdoc'>Eliminar</a>
-                    </td>
+                    <a href='editardon.php?id=$Id_donacion'>Editar</a>
+                    <a href='eliminardon.php?id=$Id_donacion'>Eliminar</a>
                   </tr>";
         }
         $rta->free();
