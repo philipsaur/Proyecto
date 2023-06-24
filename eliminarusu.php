@@ -1,0 +1,89 @@
+<?php
+// Establecer la conexión a la base de datos
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "owl";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar la conexión
+if ($conn->connect_error) {
+    die("Error de conexión: " . $conn->connect_error);
+}
+
+// Verificar si se ha enviado el formulario y se ha hecho clic en el botón "Eliminar"
+if (isset($_POST["eliminar"])) {
+    // Obtener el ID del registro a eliminar
+    $id = $_POST["id"];
+
+    // Eliminar el registro de la base de datos
+    $sql = "DELETE FROM registrar_usuarios WHERE N_documento='$id'";
+
+    if ($conn->query($sql) === TRUE) {
+        // Redirigir a la página Consultarusu.php después de eliminar el registro
+        header("Location: Consultarusu.php");
+        exit();
+    } else {
+        echo "Error al eliminar el registro: " . $conn->error;
+    }
+}
+
+// Obtener el ID del registro a eliminar
+$id = $_GET["id"];
+
+// Obtener los datos del registro de la base de datos
+$sql = "SELECT * FROM registrar_usuarios WHERE N_documento='$id'";
+$resultado = $conn->query($sql);
+
+if ($resultado->num_rows == 1) {
+    $row = $resultado->fetch_assoc();
+    $numdoc = $row["N_documento"];
+    $contrasena = $row["Contraseña"];
+    $username = $row["Nombre_de_usuario"];
+    $primerNombre = $row["Primer_nombre"];
+    $segundoNombre = $row["Segundo_nombre"];
+    $codigoCiudad = $row["Codigo_ciudad"];
+    $edad = $row["Edad"];
+} else {
+    echo "Registro no encontrado.";
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Usuario</title>
+    <link rel="stylesheet" href="styleviajes.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="PSG.png" alt="Logo PSG">
+        </div>
+        <nav class="navi">
+            <a href="Consultarusu.php">Regresar</a>
+            <a href="index.html"><button class="BtnLogin">Cerrar sesión</button></a>
+        </nav>
+    </header>
+
+    <h1>Eliminar Usuario</h1>
+
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <input type="hidden" name="id" value="<?php echo $numdoc; ?>">
+        <p>¿Estás seguro de que deseas eliminar el siguiente usuario?</p>
+        <p>Número de Documento: <?php echo $numdoc; ?></p>
+        <p>Contraseña: <?php echo $contrasena; ?></p>
+        <p>Nombre de Usuario: <?php echo $username; ?></p>
+        <p>Primer Nombre: <?php echo $primerNombre; ?></p>
+        <p>Segundo Nombre: <?php echo $segundoNombre; ?></p>
+        <p>Código de Ciudad: <?php echo $codigoCiudad; ?></p>
+        <p>Edad: <?php echo $edad; ?></p>
+        <input type="submit" name="eliminar" value="Eliminar">
+    </form>
+</body>
+</html>

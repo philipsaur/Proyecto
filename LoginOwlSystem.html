@@ -7,6 +7,26 @@
     <title>PSG OWL SYSTEM|Registro beneficiarios</title>
     <link rel="stylesheet" href="styleviajes.css">
     <link rel="stylesheet" href="stylePr.css">
+    <style>
+      .toggle-password {
+          margin-left: 5px;
+          cursor: pointer;
+      }
+  </style>
+  <script>
+      function togglePassword() {
+          var passwordInput = document.getElementById("password");
+          var toggleButton = document.getElementById("toggle-button");
+
+          if (passwordInput.type === "password") {
+              passwordInput.type = "text";
+              toggleButton.textContent = "Ocultar";
+          } else {
+              passwordInput.type = "password";
+              toggleButton.textContent = "Mostrar";
+          }
+      }
+  </script>
 </head>
 <body>
 
@@ -27,13 +47,17 @@
         <input type="text" placeholder="Nombre" name="nombre">
         <input type="text" placeholder="Apellidos" name="apellido">
         <input type="text" placeholder="Nacionalidad" name="nacion">
-        <input type="text" placeholder="Tipo de documento" name="tipodoc">
+        <input type="text" placeholder="Tipo de documento" name="tipodoc"><br><br>
+        Fecha de nacimiento
         <input type="date" placeholder="Fecha de nacimiento" name="fdn">
         <input type="submit" name="registerI" value="REGISTRAR">
     </form>
     <form action="Consultarlog.php" method="post">
-        <button type="submit" class="btn">CONSULTAR</button>
-    </form>
+      <button type="submit" class="btn">CONSULTAR BENEFICIARIOS</button>
+  </form>
+  <form action="Consultarusu.php" method="post">
+      <button type="submit" class="btn">CONSULTAR USUARIOS</button>
+  </form>
 </main>
 
 </body>

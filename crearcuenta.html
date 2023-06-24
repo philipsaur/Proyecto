@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSG OWL SYSTEM|Registro beneficiarios</title>
+    <link rel="stylesheet" href="styleviajes.css">
+    <link rel="stylesheet" href="stylePr.css">
+    <style>
+        .toggle-password {
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        .password-container {
+            position: relative;
+        }
+        .toggle-button {
+            position: absolute;
+            top: 50%;
+            right: 5px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function togglePassword() {
+            var passwordInput = document.getElementById("password");
+            var toggleButton = document.getElementById("toggle-button");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                toggleButton.textContent = "Ocultar";
+            } else {
+                passwordInput.type = "password";
+                toggleButton.textContent = "Mostrar";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="PSG.png" alt="Logo PSG">
+        </div>
+        <nav class="navi">
+            <a href="index.html">Regresar</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Crea tu cuenta</h1>
+        <form action="conusu.php" method="post">
+            <input type="number" placeholder="Numero de documento" name="N_documento" required><br>
+            <div class="password-container">
+                <input type="password" placeholder="Contraseña" name="Contraseña" id="password" required>
+                <span class="toggle-button" id="toggle-button" onclick="togglePassword()">Mostrar</span>
+            </div>
+            <input type="text" placeholder="Nombre de usuario" name="Nombre_de_usuario" required>
+            <input type="text" placeholder="Primer Nombre" name="primer_nombre" required>
+            <input type="text" placeholder="Segundo Nombre" name="segundo_nombre" required>
+            <input type="text" placeholder="Codigo ciudad" name="codigo_ciudad" required>
+            <input type="number" placeholder="Edad" name="edad" required><br><br>
+            <input type="submit" name="registerI" value="Crear cuenta">
+        </form>
+    </main>
+
+</body>
+</html>
