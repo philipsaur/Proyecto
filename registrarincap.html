@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regitro Novedades OS</title>
+    <link rel="stylesheet" href="styleviajes.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <img src="PSG.png" alt="Logo PSG">
+        </div>
+        <nav class="navi">
+          <a href="Novedades.html">Regresar</a>
+          <a href="index.html" ><button class="BtnLogin">Cerrar sesión</button></a>
+        </nav>
+      </header>
+      <body>
+    <form action="conincap.php" method="post">
+    	<h1>Nuevo Registro</h1>
+    	Fecha incapacidad
+        <input type="date" name="FI" placeholder="Fecha de incapacidad" required>
+        <input type="text" name="TE" placeholder="Tipo de Excusa" required>
+    	<input type="number" name="NDR" placeholder="Numero de Radicado"required>
+        <input type="text" name="EGI" placeholder="Entidad que genera la incapacidad" required>
+        <input type="text" name="NDC" placeholder="Numero de contacto"><br><br>
+        
+    	<input type="submit" name="registerI" value="Registrar">
+    </form>
+</body>
+</html>

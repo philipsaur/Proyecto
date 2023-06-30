@@ -7,7 +7,6 @@
         if (!$conn){
           die ("error". mysqli_connect_error());
         }
-		echo "Conexion exitosa";
         }
 ?>
 

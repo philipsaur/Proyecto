@@ -4,36 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PSG OWL SYSTEM</title>
-    <link rel="stylesheet" href="stylePr.css">
+    <title>Inventario OS </title>
+    <link rel="stylesheet" href="styleI.css">
 </head>
 <body>
+  <div class="container">
+    <header>
+        <div class="logo">
+          <img src="PSG.png" alt="Logo PSG">
+        </div>
+        <nav class="navi">
+          <a href="IC.html">Regresar</a>
+          <a href="index.html"><button class="BtnLogin">Cerrar sesión</button></a>
+        </nav>
+      </header>
+    </header>
 
-<header>
-  <div class="logo">
-    <img src="PSG.png" alt="Logo PSG">
-    Inventarios
+    <nav class="navbar">
+      <h1>Modulo Inventario</h1>
+      <ul>
+        <li><a href="Registrarproducto.html">Registrar Productos</a></li>
+        <li><a href="consultarinv.php">Consultar Productos</a></li>
+      </ul>
+    </nav>
   </div>
-  <nav class="navi">
-    <a href="Blog.html">Blog</a>
-        <a href="Novedades.html">Novedades</a>
-    <a href="Transporte.html">Transporte</a>
-    <a href="Donaciones.html">Donaciones</a>
-    <a href="LoginOwlSystem.html">Registros</a>
-    <a href="IC.html">Regresar</a>
-    <a href="index.html"><button class="BtnLogin">Cerrar sesión</button></a>
-  </nav>
-</header>
-
-<body>
-    <form method="post">
-    	<h1>¡Suscribete!</h1>
-    	<input type="text" name="name" placeholder="Nombre completo">
-    	<input type="email" name="email" placeholder="Email">
-    	<input type="submit" name="register">
-    </form>
-       <?php 
-        include("registrar.php");
-        ?>
 </body>
 </html>
+

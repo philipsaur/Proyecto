@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSG OWL SYSTEM|Inventarios </title>
+    <link rel="stylesheet" href="actuviaje.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="PSG.png" alt="Logo PSG">
+  </div>
+  <nav class="navi">
+    <a href="Inventarios.html">Regresar</a>
+    <a href="index.html"><button class="BtnLogin">Cerrar sesión</button></a>
+  </nav>
+</header>
+
+<body>
+    <form action="coninv.php" method="post">
+    	<h1>Inventario</h1>
+    	<input type="number" name="IDI" placeholder="Id Inventario"><br><br>
+        Fecha Registro
+        <input type="date" name="FD" placeholder="Fecha Registro">
+    	<input type="number" name="Cantidad" placeholder="Cantidad">
+      <input type="number" name="IDD" placeholder="Id donacion">
+        <input type="text" name="Archivados" placeholder="Archivados">
+        <select name="EM">
+            <option>Estado de material</option>
+            <option>Bueno</option>
+            <option>Malo</option>
+
+        </select>
+        
+    	<input type="submit" name="registerI" value="Registrar">
+    </form>
+</body>
+</html>

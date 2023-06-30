@@ -1,0 +1,2 @@
+ErrorDocument 404 http://localhost/owl/404.php
+ErrorDocument 500 http://localhost/owl/500.php
