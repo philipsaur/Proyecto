@@ -1,4 +1,6 @@
 <?php
+session_start(); // Inicia la sesión
+
 include_once "registrar.php";
 
 $Num_doc = $_POST["N_documento"];
@@ -14,11 +16,16 @@ if ($result->num_rows == 1) {
         header("Location: IC.html");
         exit();
     } else {
-        echo "Contraseña incorrecta";
+        $_SESSION["mensaje"] = "Contraseña incorrecta"; // Guarda el mensaje en la variable de sesión
+        header("Location: index.html"); // Redirige a la página principal
+        exit();
     }
 } else {
-    echo "Usuario no encontrado";
+    $_SESSION["mensaje"] = "Usuario no encontrado"; // Guarda el mensaje en la variable de sesión
+    header("Location: index.html"); // Redirige a la página principal
+    exit();
 }
 
 $conn->close();
 ?>
+

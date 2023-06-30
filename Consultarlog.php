@@ -7,6 +7,7 @@
     <title>Formulario PHP</title>
     <link rel="stylesheet" href="styleviajes.css">
     <style>
+        /* Estilos para la tabla y las acciones */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -60,7 +61,7 @@
       </header>
     </header>
 
-    <h1>Registro Directorio</h1>
+    <h1>Registro Inscripcion</h1>
     <h4>Se ha registrado lo siguiente:</h4>
 
     <?php

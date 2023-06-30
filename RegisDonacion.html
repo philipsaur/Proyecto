@@ -23,13 +23,14 @@
     <form action="conexdon.php" method="post">
         <nav class="navbar">
           <h1> Registrar Donaciones</h1>
-    	<input type="number" name="IDD" placeholder="Id Donacion"><br><br>
+    	<input type="number" name="IDD" placeholder="Id Donacion" required><br><br>
         Fecha Donacion
-        <input type="date" name="FD" placeholder="Fecha Donacion">
-    	<input type="number" name="Cantidad" placeholder="Cantidad">
-
+      <input type="date" name="FD" placeholder="Fecha Donacion" required>
+    	<input type="number" name="Cantidad" placeholder="Cantidad" required>
+      <input type="text" name="NPD" placeholder="Nombre Persona Donante">
+      <input type="text" name="NED" placeholder="Nombre Empresa donante">
       <select name="Tipo">
-        <option value="">Tipo de Donacion</option>
+        <option disabled selected value>Tipo de Donacion</option>
         <option value="Monetaria">Monetaria</option>
         <option value="Material">Material</option>
       </select>

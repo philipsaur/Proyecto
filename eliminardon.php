@@ -42,6 +42,8 @@ if ($resultado->num_rows == 1) {
     $Cantidad = $row["cantidad"];
     $Tipo_donacion = $row["Tipo_donacion"];
     $Id_donacion = $row["Id_donacion"];
+    $Nombre_per = $row["Nombre_persona_donante"];
+    $Nombre_emp = $row["Nombre_empresa_donante"];
 } else {
     echo "Registro no encontrado.";
     exit();
@@ -76,6 +78,8 @@ if ($resultado->num_rows == 1) {
         <p>Fecha de Donación: <?php echo $Fecha_donacion; ?></p>
         <p>Cantidad: <?php echo $Cantidad; ?></p>
         <p>Tipo de Donación: <?php echo $Tipo_donacion; ?></p>
+        <p>Nombre Persona donante: <?php echo $Nombre_per; ?></p>
+        <p>Nombre Empresa donante: <?php echo $Nombre_emp; ?></p>
         <input type="submit" name="eliminar" value="Eliminar">
     </form>
 </body>

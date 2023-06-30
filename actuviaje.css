@@ -101,7 +101,7 @@
   }
   
   input[type='submit'] {
-    background-color:rgb(231, 141, 39);
+    background-color: #48e;
     color: #fff;
     width: calc(80% - 20px);
     margin: 0 10%;

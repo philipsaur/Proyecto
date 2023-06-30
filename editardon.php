@@ -14,8 +14,10 @@ if (isset($_POST["guardar"])) {
     $Fecha_donacion = $_POST["fecha_donacion"];
     $Cantidad = $_POST["cantidad"];
     $Tipo_donacion = $_POST["Tipo_donacion"];
+    $Nombre_per = $_POST["Nombre_persona_donante"];
+    $Nombre_emp = $_POST["Nombre_empresa_donante"];
     
-    $sql = "UPDATE donacion SET Fecha_donacion = '$Fecha_donacion', Cantidad = '$Cantidad', Tipo_donacion = '$Tipo_donacion' WHERE Id_donacion = '$Id_donacion'";
+    $sql = "UPDATE donacion SET Fecha_donacion = '$Fecha_donacion', Cantidad = '$Cantidad', Tipo_donacion = '$Tipo_donacion', Nombre_persona_donante = '$Nombre_per', Nombre_empresa_donante = '$Nombre_emp' WHERE Id_donacion = '$Id_donacion'";
 
 
     if ($conn->query($sql) === TRUE) {
@@ -34,6 +36,8 @@ if (isset($_POST["guardar"])) {
         $Fecha_donacion = $row["Fecha_donacion"];
         $Cantidad = $row["cantidad"];
         $Tipo_donacion = $row["Tipo_donacion"];
+        $Nombre_per = $row["Nombre_persona_donante"];
+        $Nombre_emp = $row["Nombre_empresa_donante"];
     } else {
         echo "Registro no encontrado.";
         exit();
@@ -67,10 +71,12 @@ if (isset($_POST["guardar"])) {
         <input type="hidden" name="id" value="<?php echo $Id_donacion; ?>">
         <input type="text" placeholder="Fecha de Donación" name="fecha_donacion" value="<?php echo $Fecha_donacion; ?>">
         <input type="text" placeholder="Cantidad" name="cantidad" value="<?php echo $Cantidad; ?>">
+        <input type="text" placeholder="Nombre Persona" name="Nombre_persona_donante" value="<?php echo $Nombre_per; ?>">
+        <input type="text" placeholder="Nombre Empresa" name="Nombre_empresa_donante" value="<?php echo $Nombre_emp; ?>">
         <select name="Tipo_donacion">
-        <option value="">Tipo de Donacion</option>
-        <option value="Monetaria">Monetaria</option>
-        <option value="Material">Material</option>
+        <option disabled selected value>Tipo de Donacion</option>
+        <option >Monetaria</option>
+        <option >Material</option>
       </select>
       <br><br>
         <input type="submit" name="guardar" value="Guardar cambios">

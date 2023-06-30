@@ -1,23 +1,3 @@
-<?php
-include_once "registrar.php";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $Id_donacion = $_POST["IDD"];
-    $Fecha_donacion = $_POST["FD"];
-    $Cantidad = $_POST["Cantidad"];
-    $Tipo_donacion = $_POST["Tipo_donacion"];
-
-    $sql = "INSERT INTO donacion (Id_donacion, Fecha_don, Cantidad, Tipo_donacion) VALUES ('$Id_donacion', '$Fecha_donacion', '$Cantidad', '$Tipo_donacion')";
-
-    if ($conn->query($sql)) {
-        echo "Registro creado";
-        include_once "RegisDonacion.html";
-    } else {
-        echo "Error, no se registró";
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,6 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         <nav class="navi">
             <a href="Donaciones.html">Regresar</a>
+            <a href="excel4.php" class="BtnLogin">Descargar Excel</a>
             <a href="index.html"><button class="BtnLogin">Cerrar sesión</button></a>
         </nav>
     </header>
@@ -91,6 +72,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <th>Fecha Donación</th>
                 <th>Cantidad</th>
                 <th>Tipo de Donación</th>
+                <th>Nombre Persona</th>
+                <th>Nombre Empresa</th>
                 <th class="acciones">Acciones</th>
             </tr>';
     if ($rta = $conn->query($sql)) {
@@ -99,12 +82,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $Fecha_donacion = $r["Fecha_donacion"];
             $Cantidad = $r["cantidad"];
             $Tipo_donacion = $r["Tipo_donacion"];
+            $Nombre_per = $r["Nombre_persona_donante"];
+            $Nombre_emp = $r["Nombre_empresa_donante"];
 
             echo "<tr>
                     <td>$Id_donacion</td>
                     <td>$Fecha_donacion</td>
                     <td>$Cantidad</td>
                     <td>$Tipo_donacion</td>
+                    <td>$Nombre_per</td>
+                    <td>$Nombre_emp</td>
                     <td class='acciones'>
                     <a href='editardon.php?id=$Id_donacion'>Editar</a>
                     <a href='eliminardon.php?id=$Id_donacion'>Eliminar</a>

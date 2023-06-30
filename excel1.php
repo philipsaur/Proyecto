@@ -1,9 +1,9 @@
 <?php
 require_once("registrar.php");
 header("Content-Type: application/vnd.ms-excel");
-header("Content-Disposition: attachment; filename=ReporteUsuarios.xls");
-
-echo '<table>
+header("Content-Disposition: attachment; filename=ReporteNovedades.xls");
+$sql = "SELECT * FROM registrar_usuarios";
+    echo '<table>
             <tr>
                 <th>Numero de documento</th>
                 <th>Contraseña</th>
@@ -14,7 +14,6 @@ echo '<table>
                 <th>Edad</th>
                 <th class="acciones">Acciones</th>
             </tr>';
-            $sql = "SELECT * FROM Registrar_usuarios";
     if ($rta = $conn->query($sql)) {
         while ($r = $rta->fetch_assoc()) {
             $Num_doc = $r["N_documento"];
@@ -33,6 +32,10 @@ echo '<table>
                     <td>$Segundo_nombre</td>
                     <td>$Codigo_ciudad</td>
                     <td>$Edad</td>
+                    <td class='acciones'>
+                        <a href='editarusu.php?id=$Num_doc'>Editar</a>
+                        <a href='eliminarusu.php?id=$Num_doc'>Eliminar</a>
+                    </td>
                   </tr>";
         }
         $rta->free();

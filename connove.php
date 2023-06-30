@@ -10,7 +10,7 @@ $Comentarios = $_POST["Comen"];
 $sql = "INSERT INTO novedades (FechaN, Id_empleado, Tipo_novedad, Comentarios) VALUES ('$Fecha_novedad', '$Id_empleado', '$Tipo_novedad', '$Comentarios');";
 if($conn -> query($sql)){
     echo "Registro creado";
-    include_once "Novedades.html";
+    include_once "registrarnovedades.html";
 }
 else{
     echo "Error, no se registró";

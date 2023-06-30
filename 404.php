@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="404.css">
 </head>
 <body>
-    <div class="container_404">
+<header>
+<img src="PSG.png" class="logo" alt="fundacion">
+</header>
+    <div class="container-404">
         <h1>ERROR 404</h1>
         <p>Disculpa la molestia pero la pagina no se encuentra 
-            disponible en este momento. intenta mas tarde. 
+            disponible en este momento. Intenta mas tarde. 
         </p>
 
         <a href="index.html" Class="boton">

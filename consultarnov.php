@@ -67,7 +67,9 @@
         </div>
         <nav class="navi">
           <a href="Novedades.html">Regresar</a>
+          <a href="excel1.php" class="BtnLogin">Descargar Excel</a>
           <a href="index.html"><button class="BtnLogin">Cerrar sesión</button></a>
+          
         </nav>
       </header>
     </header>

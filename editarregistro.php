@@ -1,30 +1,42 @@
 <?php
+// Establecer la conexión a la base de datos
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "owl";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar la conexión
 if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
 }
+
+// Verificar si se ha enviado el formulario y se ha hecho clic en el botón "Guardar cambios"
 if (isset($_POST["guardar"])) {
+    // Obtener los datos del formulario
     $id = $_POST["id"];
     $nombre = $_POST["nombre"];
     $apellido = $_POST["apellido"];
     $nacionalidad = $_POST["nacionalidad"];
     $tipodoc = $_POST["tipodoc"];
     $fdn = $_POST["fdn"];
+
+    // Actualizar los datos en la base de datos
     $sql = "UPDATE Inscripcion SET Nombre='$nombre', Apellidos='$apellido', Nacionalidad='$nacionalidad', Tipo_documento='$tipodoc', Fecha_nacimiento='$fdn' WHERE Numero_documento='$id'";
 
     if ($conn->query($sql) === TRUE) {
+        // Redirigir a la página de consultarlog.php después de guardar los cambios
         header("Location: consultarlog.php");
         exit();
     } else {
         echo "Error al guardar los cambios: " . $conn->error;
     }
 } else {
+    // Obtener el ID del registro a editar
     $id = $_GET["id"];
+
+    // Obtener los datos del registro de la base de datos
     $sql = "SELECT * FROM Inscripcion WHERE Numero_documento='$id'";
     $resultado = $conn->query($sql);
 

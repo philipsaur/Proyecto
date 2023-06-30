@@ -1,2 +1,2 @@
-ErrorDocument 404 https://philipsaur.github.io/Version-preliminar-OWL-System/404.php
-ErrorDocument 500 https://philipsaur.github.io/Version-preliminar-OWL-System/500.php
+ErrorDocument 404 http://localhost/owl/404.php
+ErrorDocument 500 http://localhost/owl/500.php

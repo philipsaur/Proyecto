@@ -55,6 +55,7 @@
         </div>
         <nav class="navi">
           <a href="Transporte.html">Regresar</a>
+          <a href="excel3.php" class="BtnLogin">Descargar Excel</a>
           <a href="index.html"><button class="BtnLogin">Cerrar sesión</button></a>
         </nav>
       </header>

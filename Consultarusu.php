@@ -57,8 +57,9 @@
         </div>
         <nav class="navi">
             <a href="LoginOwlSystem.html">Regresar</a>
-            <a href="index.html"><button class="BtnLogin">Cerrar sesión</button></a>
             <a href="descargar_excel.php" class="BtnLogin">Descargar Excel</a>
+            <a href="index.html"><button class="BtnLogin">Cerrar sesión</button></a>
+            
 
         </nav>
     </header>

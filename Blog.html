@@ -11,20 +11,19 @@
 
     <header class="header">
         <div class="menu container">
-            <a href="#" class="logo"><img src="PSG.png" alt=""></a> 
+            <a href="#" class="logo"><img src="PSG.png" alt="LogoFundacion"></a> 
             <input type="checkbox" id="menu"/>
             <label for="menu">
                 <img src="images/menu.svg" class="menu-icono" alt="">
             </label>
             <nav class="navbar">
                 <ul>
-                    <li><a href="https://drive.google.com/drive/folders/1Di1bwgoWpArV1ODfUe-rECR8ijcuWMtU?usp=sharing">Casos de uso</a></li>
-                    <li><a href="https://docs.google.com/presentation/d/1K7r_qg-Uc4CA5_auvDEVq4cT-lY6-Z6H/edit?usp=sharing&ouid=102966537843143206606&rtpof=true&sd=true">Presentacion</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1Di1bwgoWpArV1ODfUe-rECR8ijcuWMtU?usp=sharing" target="_blank">Casos de uso</a></li>
+                    <li><a href="https://docs.google.com/presentation/d/1K7r_qg-Uc4CA5_auvDEVq4cT-lY6-Z6H/edit?usp=sharing&ouid=102966537843143206606&rtpof=true&sd=true" target="_blank">Presentacion</a></li>
                     <li><a href="#PSG">Podemos Ser Grandes</a></li>
                     <li><a href="#about">Volvamos a Ser Grandes</a></li>
                     <li><a href="#Contacto">Contacto</a></li>
                     <li><a href="index.html">Regresar</a></li>
-
                 </ul>
             </nav>
             <div class="Socials-1">
@@ -62,11 +61,11 @@
 
     <section class="information" id="Contacto">
         <div class="form-content">
-            <form>
+            <form action="concon.php" method="post">
                 <h2>¡Contáctanos!</h2>
-                <input type="text" id="name" placeholder="Nombre">
-                <input type="phone" id="phone" placeholder="Teléfono">
-                <input type="email" id="email" placeholder="Correo">
+                <input type="text" name="name" placeholder="Nombre">
+                <input type="phone" name="phone" placeholder="Teléfono">
+                <input type="email" name="email" placeholder="Correo">
                 <textarea name="Message" id="Message" cols="30" rows="5" placeholder="Mensaje"></textarea>
                 <input class="btn-3" type="submit" value="ENVIAR"> 
             </form>
